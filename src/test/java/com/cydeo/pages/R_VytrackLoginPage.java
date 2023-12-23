@@ -27,4 +27,17 @@ public class R_VytrackLoginPage {
        passwordInput.sendKeys(password);
        loginBtn.click();
     }
+
+
+    public void login(String userType){
+
+        userType= userType.replace(" ","_");
+
+        String username = ConfigurationReader.getProperty(userType + "_username");
+        String password = ConfigurationReader.getProperty(userType + "_password");
+
+        login(username,password);
+
+    }
+
 }

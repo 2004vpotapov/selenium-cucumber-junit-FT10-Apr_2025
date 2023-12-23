@@ -13,6 +13,10 @@ public class R_VytrackLogin_StepDef {
 
     R_VytrackLoginPage loginPage = new R_VytrackLoginPage();
 
+    @Given("user is on the login page")
+    public void user_is_on_the_login_page() {
+        Driver.getDriver().get(ConfigurationReader.getProperty("vyTrackUrl"));
+    }
 
     @When("user enters the driver information")
     public void user_enters_the_driver_information() {
@@ -40,8 +44,10 @@ public class R_VytrackLogin_StepDef {
     loginPage.login(ConfigurationReader.getProperty("store_manager_username"),ConfigurationReader.getProperty("store_manager_password"));
     }
 
-    @Given("user is on the login page")
-    public void user_is_on_the_login_page() {
-        Driver.getDriver().get(ConfigurationReader.getProperty("vyTrackUrl"));
+    @When("user enters the {string} information")
+    public void user_enters_the_information(String string) {
+        loginPage.login(string);
     }
+
+
 }

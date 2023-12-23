@@ -26,3 +26,10 @@ Feature:Users should be able to login
     #Given user is on the login page
     When user enters the store manager information
     Then user should be able to login
+
+    @vytrackparam
+  Scenario: Login as store manager
+    #Given user is on the login page
+    When user enters the "store manager" information
+    Then user should be able to login
+
