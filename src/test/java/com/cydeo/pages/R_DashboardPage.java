@@ -15,4 +15,7 @@ public class R_DashboardPage {
 
     @FindBy(css = ".title.title-level-1")
     public List<WebElement> allTopModules;
+
+    @FindBy(css = "#user-menu>a")
+    public WebElement userInfo;
 }
