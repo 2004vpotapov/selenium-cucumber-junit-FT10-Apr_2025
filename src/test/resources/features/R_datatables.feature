@@ -29,7 +29,7 @@ Feature: Examples for DataTable
       | System             |
 
 
-
+  @db
   Scenario: Menu Options for salesmanager
     When user enters the "store manager" information
     Then user should be able to see following modules
