@@ -18,13 +18,16 @@ public class R_Dashboard_StepDef {
 
         BrowserUtils.sleep(3);
 
-        List<String> actualModules = new ArrayList<>();
+//        List<String> actualModules = new ArrayList<>();
+//
+//        for (WebElement eachModule : dashboardPage.allTopModules) {
+//            actualModules.add(eachModule.getText());
+//        }
 
-        for (WebElement eachModule : dashboardPage.allTopModules) {
-            actualModules.add(eachModule.getText());
-        }
+       // Assert.assertEquals(expectedModules,actualModules);
 
-        Assert.assertEquals(expectedModules,actualModules);
+        Assert.assertEquals(expectedModules,BrowserUtils.getElementsText(dashboardPage.allTopModules));
+
 
     }
 }
