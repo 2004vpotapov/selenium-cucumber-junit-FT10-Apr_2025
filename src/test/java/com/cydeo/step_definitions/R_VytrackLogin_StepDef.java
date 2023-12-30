@@ -50,4 +50,14 @@ public class R_VytrackLogin_StepDef {
     }
 
 
+    @When("the user login with {string},{string}")
+    public void the_user_login_with(String username, String password) {
+        loginPage.login(username,password);
+    }
+
+    @Then("the user should not be able to log in")
+    public void the_user_should_not_be_able_to_log_in() {
+        BrowserUtils.verifyTitle("Login");
+    }
+
 }
