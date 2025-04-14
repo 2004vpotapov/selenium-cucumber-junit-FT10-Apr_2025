@@ -15,6 +15,7 @@ public class Hooks {
     //import the @Before coming from io.cucumber.java
     @Before (order = 1)
     public void setupMethod(){
+
         System.out.println("---> @Before: RUNNING BEFORE EACH SCENARIO");
     }
 
@@ -55,6 +56,7 @@ public class Hooks {
 
     //@AfterStep
     public void teardownStep(){
+
         System.out.println("-----> @AfterSTEP : Running after each step!");
     }
 
