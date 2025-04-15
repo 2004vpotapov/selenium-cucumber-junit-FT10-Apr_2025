@@ -1,4 +1,4 @@
-@wip
+@smoke
 Feature: Webtable app login
   User Story: User should be able to login webtable application
 

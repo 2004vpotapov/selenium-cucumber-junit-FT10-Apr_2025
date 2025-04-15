@@ -1,4 +1,4 @@
-@wip
+
 Feature: Webtable application login
   User Story: User should be able to login webtable application
 

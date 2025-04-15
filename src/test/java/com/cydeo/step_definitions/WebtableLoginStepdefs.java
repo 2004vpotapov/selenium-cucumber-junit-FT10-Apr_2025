@@ -17,6 +17,7 @@ public class WebtableLoginStepdefs {
 
     @Given("user is on the login page of webtable app")
     public void userIsOnTheLoginPageOfWebtableApp() {
+
         Driver.getDriver().get(ConfigurationReader.getProperty("env"));
     }
 
